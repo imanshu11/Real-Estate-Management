@@ -11,7 +11,7 @@ import { fetchApi, baseUrl } from '../utils/fetchApi';
 
 const Search = ({ properties }) => {
     const [searchFilters, setSearchFilters] = useState(false);
-    const router = useRouter() || { query: { purpose: '' } };
+    const router = useRouter() || { query: { purpose: '' } }; //query bug fixed
 
     return( 
         <Box>
@@ -24,8 +24,8 @@ const Search = ({ properties }) => {
             fontWeight="black"
             fontSize="lg"
             justifyContent="center"
-            alignItems="center"
-            onClick={() => setSearchFilters((prevFilters) => !prevFilters)}
+            alignItems="center"onClick={() => setSearchFilters(!searchFilters)}
+            
             >
             <Text>Search Property By Filters</Text>
             <Icon paddingLeft="2" w="7" as={BsFilter} /> 
