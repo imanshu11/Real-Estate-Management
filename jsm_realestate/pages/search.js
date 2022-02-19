@@ -10,12 +10,13 @@ import noresult from '../assets/images/noresult.svg';
 import { fetchApi, baseUrl } from '../utils/fetchApi';
 
 const Search = ({ properties }) => {
-    const [searchFilters, setSearchFilters] = useState(false);
+    const [searchFilters, setSearchFilters] = useState(true);
     const router = useRouter() || { query: { purpose: '' } }; //query bug fixed
 
     return( 
         <Box>
             <Flex
+            onClick={() => setSearchFilters(!searchFilters)}
             cursor="pointer" 
             bg="gray.100"
             borderBottom="1px"
@@ -24,8 +25,7 @@ const Search = ({ properties }) => {
             fontWeight="black"
             fontSize="lg"
             justifyContent="center"
-            alignItems="center"onClick={() => setSearchFilters(!searchFilters)}
-            
+            alignItems="center"
             >
             <Text>Search Property By Filters</Text>
             <Icon paddingLeft="2" w="7" as={BsFilter} /> 
