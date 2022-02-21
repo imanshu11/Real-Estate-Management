@@ -8,9 +8,9 @@ export default function Layout({ children }) {
   return (
     <>
       <Head>
-        <title>Oasis Realty</title>
+        <title>Home Club</title>
       </Head>
-      <Box maxWidth='1280px' m='auto'>
+      <Box maxWidth='1288px' m='auto' backgroundColor="gray.100">
         <header>
           <Navbar />
         </header>
